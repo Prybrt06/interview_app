@@ -16,6 +16,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF60BAED),
         title: Text(name),
       ),
@@ -56,7 +57,15 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                  );
+                },
+                child: Text("Log out"),
+              ),
             ],
           ),
         ),
